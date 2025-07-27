@@ -1,0 +1,445 @@
+idx,problem_name,difficulty
+1,User Input / Output,Easy
+2,Data Types,Easy
+3,If Else statements,Easy
+4,Switch Statement,Easy
+5,"What are arrays/strings?",Easy
+6,For loops,Easy
+7,While loops,Easy
+8,Functions (Pass by Reference and Value),Easy
+9,"Time Complexity [Learn Basics and then analyse in next Steps]",Easy
+10,Patterns,Easy
+11,Count Digits,Easy
+12,Reverse a Number,Easy
+13,Check Palindrome,Easy
+14,GCD Or HCF,Easy
+15,Armstrong Numbers,Easy
+16,Print all Divisors,Easy
+17,Check for Prime,Easy
+18,Understand recursion by print something N times,Easy
+19,Print name N times using recursion,Easy
+20,Print 1 to N using recursion,Easy
+21,Print N to 1 using recursion,Easy
+22,Sum of first N numbers,Easy
+23,Factorial of N numbers,Easy
+24,Reverse an array,Easy
+25,Check if a string is palindrome or not,Medium
+26,Fibonacci Number,Easy
+27,Hashing Theory,Medium
+28,Counting frequencies of array elements,Easy
+29,Find the highest/lowest frequency element,Easy
+30,Selection Sort,Easy
+31,Bubble Sort,Easy
+32,Insertion Sort,Easy
+33,Merge Sort,Medium
+34,Recursive Bubble Sort,Easy
+35,Recursive Insertion Sort,Easy
+36,Quick Sort,Easy
+37,Largest Element in an Array,Easy
+38,Second Largest Element in an Array without sorting,Easy
+39,Check if the array is sorted,Easy
+40,Remove duplicates from Sorted array,Easy
+41,Left Rotate an array by one place,Easy
+42,Left rotate an array by D places,Easy
+43,Move Zeros to end,Easy
+44,Linear Search,Easy
+45,Find the Union,Medium
+46,Find missing number in an array,Easy
+47,Maximum Consecutive Ones,Easy
+48,Find the number that appears once and other numbers twice,Medium
+49,Longest subarray with given sum K(positives),Medium
+50,Longest subarray with sum K (Positives + Negatives),Medium
+51,2Sum Problem,Medium
+52,Sort an array of 0's 1's and 2's,Medium
+53,Majority Element (>n/2 times),Easy
+54,Kadane's Algorithm maximum subarray sum,Easy
+55,Print subarray with maximum subarray sum (extended version of above problem),Medium
+56,Stock Buy and Sell,Easy
+57,Rearrange the array in alternating positive and negative items,Medium
+58,Next Permutation,Medium
+59,Leaders in an Array problem,Easy
+60,Longest Consecutive Sequence in an Array,Medium
+61,Set Matrix Zeros,Medium
+62,Rotate Matrix by 90 degrees,Medium
+63,Print the matrix in spiral manner,Medium
+64,Count subarrays with given sum,Easy
+65,Pascal's Triangle,Medium
+66,Majority Element (n/3 times),Medium
+67,3-Sum Problem,Medium
+68,4-Sum Problem,Hard
+69,Largest Subarray with 0 Sum,Medium
+70,Count number of subarrays with given xor K,Hard
+71,Merge Overlapping Subintervals,Medium
+72,Merge two sorted arrays without extra space,Medium
+73,Find the repeating and missing number,Hard
+74,Count Inversions,Hard
+75,Reverse Pairs,Hard
+76,Maximum Product Subarray,Easy
+77,Binary Search to find X in sorted array,Easy
+78,Implement Lower Bound,Easy
+79,Implement Upper Bound,Easy
+80,Search Insert Position,Easy
+81,Floor/Ceil in Sorted Array,Medium
+82,Find the first or last occurrence of a given number in a sorted array,Easy
+83,Count occurrences of a number in a sorted array with duplicates,Easy
+84,Search in Rotated Sorted Array I,Medium
+85,Search in Rotated Sorted Array II,Medium
+86,Find minimum in Rotated Sorted Array,Medium
+87,Find out how many times has an array been rotated,Easy
+88,Single element in a Sorted Array,Easy
+89,Find peak element,Hard
+90,Square Root of a number,Medium
+91,Nth Root of a Number,Medium
+92,Search element in a sorted matrix,Medium
+93,Median of two sorted arrays,Hard
+94,K-th element of two sorted arrays,Hard
+95,Find row with maximum number of 1's,Medium
+96,Search in a 2 D matrix,Medium
+97,Search in a row and column wise sorted matrix,Medium
+98,Find Peak Element (2D Matrix),Hard
+99,Matrix Median,Hard
+100,Remove outermost Paranthesis,Easy
+101,Reverse words in a given string / Palindrome Check,Easy
+102,Largest odd number in a string,Easy
+103,Longest Common Prefix,Easy
+104,Isomorphic String,Easy
+105,check whether one string is a rotation of another,Medium
+106,Check if two strings are anagram of each other,Medium
+107,Sort Characters by frequency,Easy
+108,Maximum Nesting Depth of Paranthesis,Easy
+109,Roman Number to Integer and vice versa,Easy
+110,Implement Atoi,Medium
+111,Count Number of Substrings,Medium
+112,Longest Palindromic Substring[Do it without DP],Hard
+113,Sum of Beauty of all substring,Medium
+114,Reverse Every Word in A String,Easy
+115,Introduction to LinkedList learn about struct and how is node represented,Easy
+116,Inserting a node in LinkedList,Easy
+117,Deleting a node in LinkedList,Medium
+118,Find the length of the linkedlist [learn traversal],Easy
+119,Search an element in the LL,Easy
+120,Introduction to DLL learn about struct and how is node represented,Easy
+121,Insert a node in DLL,Easy
+122,Delete a node in DLL,Medium
+123,Reverse a DLL,Medium
+124,Middle of a LinkedList [TortoiseHare Method],Easy
+125,Reverse a LinkedList [Iterative],Easy
+126,Reverse a LL [Recursive],Easy
+127,Detect a loop in LL,Medium
+128,Find the starting point in LL,Medium
+129,Length of Loop in LL,Easy
+130,Check if LL is palindrome or not,Medium
+131,Segregate odd and even nodes in LL,Medium
+132,Remove Nth node from the back of the LL,Medium
+133,Delete the middle node of LL,Medium
+134,Sort LL,Medium
+135,Sort a LL of 0's 1's and 2's by changing links,Medium
+136,Find the intersection point of Y LL,Medium
+137,Add 1 to a number represented by LL,Medium
+138,Add 2 numbers in LL,Medium
+139,Delete all occurrences of a key in DLL,Medium
+140,Find pairs with given sum in DLL,Medium
+141,Remove duplicates from sorted DLL,Medium
+142,Reverse LL in group of given size K,Hard
+143,Rotate a LL,Medium
+144,Flattening of LL,Hard
+145,Clone a Linked List with random and next pointer,Hard
+146,Recursive Implementation of atoi(),Hard
+147,Pow(x n),Medium
+148,Count Good numbers,Easy
+149,Sort a stack using recursion,Medium
+150,Reverse a stack using recursion,Easy
+151,Generate all binary strings,Medium
+152,Generate Paranthesis,Medium
+153,Print all subsequences/Power Set,Medium
+154,Learn All Patterns of Subsequences (Theory),Medium
+155,Count all subsequences with sum K,Hard
+156,Check if there exists a subsequence with sum K,Medium
+157,Combination Sum,Medium
+158,Combination Sum–II,Medium
+159,Subset Sum–I,Medium
+160,Subset Sum–II,Medium
+161,Combination Sum – III,Hard
+162,Letter Combinations of a Phone number,Medium
+163,Palindrome Partitioning,Medium
+164,Word Search,Medium
+165,N Queen,Hard
+166,Rat in a Maze,Hard
+167,Word Break,Hard
+168,M Coloring Problem,Hard
+169,Sudoku Solver,Hard
+170,Expression Add Operators,Hard
+171,Introduction to Bit Manipulation [Theory],Easy
+172,Check if the i-th bit is set or not,Easy
+173,Check if a number is odd or not,Easy
+174,Check if a number is power of 2 or not,Easy
+175,Count the number of set bits,Easy
+176,Set/Unset the rightmost unset bit,Easy
+177,Swap two numbers,Easy
+178,Divide two integers without using multiplication division and mod operator,Medium
+179,Count number of bits to be flipped to convert A to B,Medium
+180,Find the number that appears odd number of times,Easy
+181,Power Set,Medium
+182,Find xor of numbers from L to R,Easy
+183,Find the two numbers appearing odd number of times,Easy
+184,Print Prime Factors of a Number,Easy
+185,All Divisors of a Number,Easy
+186,Sieve of Eratosthenes,Medium
+187,Find Prime Factorisation of a Number using Sieve,Medium
+188,Power(n x),Medium
+189,Implement Stack using Arrays,Easy
+190,Implement Queue using Arrays,Easy
+191,Implement Stack using Queue,Medium
+192,Implement Queue using Stack,Medium
+193,Implement stack using Linkedlist,Easy
+194,Implement queue using Linkedlist,Medium
+195,Check for balanced paranthesis,Medium
+196,Implement Min Stack,Medium
+197,Infix to Postfix Conversion using Stack,Medium
+198,Prefix to Infix Conversion,Medium
+199,Prefix to Postfix Conversion,Medium
+200,Postfix to Prefix Conversion,Medium
+201,Postfix to Infix,Medium
+202,Convert Infix To Prefix Notation,Medium
+203,Next Greater Element,Easy
+204,Next Greater Element 2,Medium
+205,Next Smaller Element,Easy
+206,Number of NGEs to the right,Easy
+207,Trapping Rainwater,Hard
+208,Sum of subarray minimum,Medium
+209,Asteroid Collision,Medium
+210,Sum of subarray ranges,Medium
+211,Remove k Digits,Medium
+212,Largest rectangle in a histogram,Medium
+213,Maximal Rectangles,Hard
+214,Sliding Window maximum,Hard
+215,Stock span problem,Medium
+216,The Celebrity Problem,Hard
+217,LRU cache (IMPORTANT),Hard
+218,LFU cache,Hard
+219,Longest Substring Without Repeating Characters,Medium
+220,Max Consecutive Ones III,Medium
+221,Fruit Into Baskets,Medium
+222,longest repeating character replacement,Medium
+223,Binary subarray with sum,Easy
+224,Count number of nice subarrays,Medium
+225,Number of substring containing all three characters,Medium
+226,Maximum point you can obtain from cards,Medium
+227,Longest Substring with At Most K Distinct Characters,Medium
+228,Subarray with k different integers,Hard
+229,Minimum Window Substring,Hard
+230,Minimum Window Subsequence,Hard
+231,Introduction to Priority Queues using Binary Heaps,Medium
+232,Min Heap and Max Heap Implementation,Medium
+233,Check if an array represents a min-heap or not,Medium
+234,Convert min Heap to max Heap,Medium
+235,Kth largest element in an array [use priority queue],Easy
+236,Kth smallest element in an array [use priority queue],Easy
+237,Sort K sorted array,Easy
+238,Merge M sorted Lists,Hard
+239,Replace each array element by its corresponding rank,Easy
+240,Task Scheduler,Medium
+241,Hands of Straights,Medium
+242,Design twitter,Medium
+243,Connect `n` ropes with minimal cost,Medium
+244,Kth largest element in a stream of running integers,Easy
+245,Maximum Sum Combination,Medium
+246,Find Median from Data Stream,Hard
+247,K most frequent elements,Medium
+248,Assign Cookies,Easy
+249,Fractional Knapsack Problem,Medium
+250,Greedy algorithm to find minimum number of coins,Medium
+251,Lemonade Change,Easy
+252,Valid Paranthesis Checker,Medium
+253,Assign Cookies,Easy
+254,Fractional Knapsack Problem,Medium
+255,Greedy algorithm to find minimum number of coins,Medium
+256,Lemonade Change,Easy
+257,Valid Paranthesis Checker,Medium
+258,N meetings in one room,Medium
+259,Jump Game,Medium
+260,Jump Game 2,Medium
+261,Minimum number of platforms required for a railway,Medium
+262,Job sequencing Problem,Medium
+263,Candy,Hard
+264,Program for Shortest Job First (or SJF) CPU Scheduling,Medium
+265,Program for Least Recently Used (LRU) Page Replacement Algorithm,Medium
+266,Insert Interval,Medium
+267,Merge Intervals,Medium
+268,Non-overlapping Intervals,Medium
+269,Preorder Traversal of Binary Tree,Easy
+270,Inorder Traversal of Binary Tree,Easy
+271,Post-order Traversal of Binary Tree,Easy
+272,Level order Traversal / Level order traversal in spiral form,Easy
+273,Iterative Preorder Traversal of Binary Tree,Easy
+274,Iterative Inorder Traversal of Binary Tree,Easy
+275,Post-order Traversal of Binary Tree using 2 stack,Easy
+276,Post-order Traversal of Binary Tree using 1 stack,Medium
+277,Preorder, Inorder, and Postorder Traversal in one Traversal,Medium
+278,Height of a Binary Tree,Medium
+279,Check if the Binary tree is height-balanced or not,Medium
+280,Diameter of Binary Tree,Medium
+281,Maximum path sum,Hard
+282,Check if two trees are identical or not,Medium
+283,Zig Zag Traversal of Binary Tree,Easy
+284,Boundary Traversal of Binary Tree,Medium
+285,Vertical Order Traversal of Binary Tree,Medium
+286,Top View of Binary Tree,Easy
+287,Bottom View of Binary Tree,Medium
+288,Right/Left View of Binary Tree,Medium
+289,Symmetric Binary Tree,Medium
+290,Root to Node Path in Binary Tree,Medium
+291,LCA in Binary Tree,Medium
+292,Maximum width of a Binary Tree,Medium
+293,Check for Children Sum Property,Hard
+294,Print all the Nodes at a distance of K in a Binary Tree,Medium
+295,Minimum time taken to BURN the Binary Tree from a Node,Hard
+296,Count total Nodes in a COMPLETE Binary Tree,Medium
+297,Requirements needed to construct a Unique Binary Tree | Theory,Medium
+298,Construct Binary Tree from inorder and preorder,Hard
+299,Construct the Binary Tree from Postorder and Inorder Traversal,Hard
+300,Serialize and deserialize Binary Tree,Hard
+301,Morris Preorder Traversal of a Binary Tree,Medium
+302,Morris Inorder Traversal of a Binary Tree,Medium
+303,Flatten Binary Tree to LinkedList,Hard
+304,Introduction to Binary Search Tree,Easy
+305,Search in a Binary Search Tree,Easy
+306,Find Min/Max in BST,Medium
+307,Ceil in a Binary Search Tree,Easy
+308,Floor in a Binary Search Tree,Easy
+309,Insert a given Node in Binary Search Tree,Easy
+310,Delete a Node in Binary Search Tree,Medium
+311,Find K-th smallest/largest element in BST,Medium
+312,Check if a tree is a BST or BT,Medium
+313,LCA in Binary Search Tree,Medium
+314,Construct a BST from a preorder traversal,Medium
+315,Inorder Successor/Predecessor in BST,Medium
+316,Merge 2 BST's,Hard
+317,Two Sum In BST | Check if there exists a pair with Sum K,Medium
+318,Recover BST | Correct BST with two nodes swapped,Hard
+319,Largest BST in Binary Tree,Hard
+320,Graph and Types,Easy
+321,Graph Representation | C++,Easy
+322,Graph Representation | Java,Easy
+323,Connected Components | Logic Explanation,Hard
+324,BFS,Medium
+325,DFS,Hard
+326,Number of provinces (leetcode),Medium
+327,Connected Components Problem in Matrix,Hard
+328,Rotten Oranges,Medium
+329,Flood fill,Hard
+330,Cycle Detection in unirected Graph (bfs),Hard
+331,Cycle Detection in undirected Graph (dfs),Hard
+332,0/1 Matrix (Bfs Problem),Medium
+333,Surrounded Regions (dfs),Hard
+334,Number of Enclaves [flood fill implementation - multisource],Hard
+335,Word ladder - 1,Hard
+336,Word ladder - 2,Hard
+337,Number of Distinct Islands [dfs multisource],Hard
+338,Bipartite Graph (DFS),Medium
+339,Cycle Detection in Directed Graph (DFS),Hard
+340,Topo Sort,Hard
+341,Kahn's Algorithm,Hard
+342,Cycle Detection in Directed Graph (BFS),Hard
+343,Course Schedule – I,Hard
+344,Course Schedule – II,Hard
+345,Find eventual safe states,Hard
+346,Alien dictionary,Hard
+347,Shortest Path in UG with unit weights,Hard
+348,Shortest Path in DAG,Hard
+349,Dijkstra's Algorithm,Hard
+350,Why priority Queue is used in Dijkstra's Algorithm,Medium
+351,Shortest path in a binary maze,Medium
+352,Path with minimum effort,Medium
+353,Cheapest flights within k stops,Hard
+354,Network Delay time,Medium
+355,Number of ways to arrive at destination,Medium
+356,Minimum steps to reach end from start by performing multiplication and mod operations with array elements,Hard
+357,Bellman Ford Algorithm,Hard
+358,Floyd Warshal Algorithm,Hard
+359,Find the city with the smallest number of neighbors in a threshold distance,Hard
+360,Minimum Spanning Tree,Hard
+361,Prim's Algorithm,Hard
+362,Disjoint Set [Union by Rank],Hard
+363,Disjoint Set [Union by Size],Hard
+364,Kruskal's Algorithm,Hard
+365,Number of operations to make network connected,Medium
+366,Most stones removed with same rows or columns,Medium
+367,Accounts merge,Hard
+368,Number of island II,Hard
+369,Making a Large Island,Hard
+370,Swim in rising water,Hard
+371,Bridges in Graph,Hard
+372,Articulation Point,Hard
+373,Kosaraju's Algorithm,Hard
+374,Climbing Stars,Medium
+375,Frog Jump(DP-3),Medium
+376,Frog Jump with k distances(DP-4),Medium
+377,Maximum sum of non-adjacent elements (DP 5),Medium
+378,House Robber (DP 6),Medium
+379,Ninja's Training (DP 7),Medium
+380,Grid Unique Paths : DP on Grids (DP8),Medium
+381,Grid Unique Paths 2 (DP 9),Medium
+382,Minimum path sum in Grid (DP 10),Medium
+383,Minimum path sum in Triangular Grid (DP 11),Medium
+384,Minimum/Maximum Falling Path Sum (DP-12),Medium
+385,3-d DP : Ninja and his friends (DP-13),Medium
+386,Subset sum equal to target (DP-14),Medium
+387,Partition Equal Subset Sum (DP-15),Medium
+388,Partition Set Into 2 Subsets With Min Absolute Sum Diff (DP-16),Medium
+389,Count Subsets with Sum K (DP-17),Medium
+390,Count Partitions with Given Difference (DP-18),Medium
+391,Assign Cookies,Hard
+392,Minimum Coins (DP-20),Hard
+393,Target Sum (DP-21),Medium
+394,Coin Change 2 (DP-22),Hard
+395,Unbounded Knapsack (DP-23),Hard
+396,Rod Cutting Problem (DP-24),Hard
+397,Longest Common Subsequence I (DP-25),Hard
+398,Print Longest Common Subsequence I (DP-26),Hard
+399,Longest Common Substring I (DP-27),Hard
+400,Longest Palindromic Subsequence I (DP-28),Hard
+401,Minimum insertions to make string palindrome I (DP-29),Hard
+402,Minimum Insertions/Deletions to Convert String I (DP-30),Hard
+403,Shortest Common Supersequence I (DP-31),Hard
+404,Distinct Subsequences I (DP-32),Hard
+405,Edit Distance I (DP-33),Hard
+406,Wildcard Matching I (DP-34),Medium
+407,Best Time to Buy and Sell Stock I (DP-35),Hard
+408,Buy and Sell Stock – II (DP-36),Hard
+409,Buy and Sell Stocks III (DP-37),Hard
+410,Buy and Stock Sell IV (DP-38),Hard
+411,Buy and Sell Stocks With Cooldown (DP-39),Hard
+412,Buy and Sell Stocks With Transaction Fee (DP-40),Hard
+413,Longest Increasing Subsequence I (DP-41),Hard
+414,Printing Longest Increasing Subsequence I (DP-42),Hard
+415,Longest Increasing Subsequence II (DP-43),Hard
+416,Largest Divisible Subset (DP-44),Hard
+417,Longest String Chain (DP-45),Hard
+418,Longest Bitonic Subsequence I (DP-46),Hard
+419,Number of Longest Increasing Subsequences (DP-47),Hard
+420,Matrix Chain Multiplication(DP-48),Hard
+421,Matrix Chain Multiplication | Bottom-Up|(DP-49),Hard
+422,Minimum Cost to Cut the Stick|(DP-50),Hard
+423,Burst Balloons|(DP-51),Hard
+424,Evaluate Boolean Expression to True|(DP-52),Hard
+425,Palindrome Partitioning – III(DP-53),Hard
+426,Partition Array for Maximum Sum|(DP-54),Hard
+427,Maximum Rectangle Area with all 1's(DP-55),Hard
+428,Count Square Submatrices with All Ones(DP-56),Hard
+429,Implement Trie – 2 (Prefix Tree),Hard
+430,Longest String with All Prefixes,Medium
+431,Number of Distinct Substrings in a String,Hard
+432,Bit PreRequisites for TRIE Problems,Hard
+433,Maximum XOR of two numbers in an array,Medium
+434,Maximum XOR With an Element From Array,Hard
+435,Minimum number of bracket reversals needed to make an expression balanced,Medium
+436,Count and say,Medium
+437,Hashing In Strings | Theory,Medium
+438,Rabin Karp,Hard
+439,Z–Function,Easy
+440,KMP algo / LPS(pi) array,Hard
+441,Shortest Palindrome,Hard
+442,Longest happy prefix,Hard
+443,Count palindromic subsequence in given string,Hard
+

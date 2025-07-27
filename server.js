@@ -355,7 +355,7 @@ app.get('/api/search-problems', auth, async (req, res) => {
     // Load problems from file with proper CSV parsing
     const fs = require('fs');
     const path = require('path');
-    const problemsFile = path.join(__dirname, '../striver_pod_frontend/public/striver_problems.txt');
+    const problemsFile = path.join(__dirname, 'striver_problems.txt');
     
     let problems = [];
     try {
