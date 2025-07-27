@@ -29,12 +29,19 @@ const corsOptions = {
       'http://127.0.0.1:5173',
       'http://127.0.0.1:5174',
       'http://127.0.0.1:5175',
-      'https://striver-pod-frontend.vercel.app/',
+      'https://striver-pod-frontend.vercel.app',
+      'https://striver-pod-frontend-git-main-alecxender1402s-projects.vercel.app',
+      'https://striver-pod-frontend-alecxender1402s-projects.vercel.app',
       process.env.FRONTEND_URL
     ].filter(Boolean);
     
     // Allow any localhost port for development
     if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:')) {
+      return callback(null, true);
+    }
+    
+    // Allow any Vercel deployment for production
+    if (origin.endsWith('.vercel.app')) {
       return callback(null, true);
     }
     
