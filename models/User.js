@@ -24,7 +24,11 @@ const userSchema = new mongoose.Schema({
   completedProblems: [{ 
     type: Number,
     min: [1, 'Problem ID must be positive']
-  }]
+  }],
+  dailyPOD: {
+    type: mongoose.Schema.Types.Mixed,
+    default: {}
+  }
 }, {
   timestamps: true, // Add createdAt and updatedAt fields
   toJSON: {

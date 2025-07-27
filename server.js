@@ -6,7 +6,6 @@ const User = require('./models/User');
 const jwt = require('jsonwebtoken');
 const { authLimiter, apiLimiter } = require('./middleware/rateLimiter');
 
-// Use environment variable for JWT secret, fallback to default for development
 const JWT_SECRET = process.env.JWT_SECRET || 'jnvoidavianladnvana';
 
 const app = express();
@@ -139,6 +138,45 @@ app.get('/api/completed-problems', auth, async (req, res) => {
   }
 });
 
+// Get daily POD data for the logged-in user
+app.get('/api/daily-pod', auth, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+    res.json({ dailyPOD: user.dailyPOD || {} });
+  } catch (error) {
+    console.error('Error fetching daily POD:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+// Save daily POD data for the logged-in user
+app.post('/api/save-daily-pod', auth, async (req, res) => {
+  try {
+    const { dailyPOD } = req.body;
+    
+    // Validate input
+    if (!dailyPOD || typeof dailyPOD !== 'object') {
+      return res.status(400).json({ message: 'Invalid daily POD data' });
+    }
+    
+    const user = await User.findById(req.user.userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    user.dailyPOD = dailyPOD;
+    await user.save();
+    
+    res.json({ message: 'Daily POD saved successfully', dailyPOD: user.dailyPOD });
+  } catch (error) {
+    console.error('Error saving daily POD:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 
 // Signup endpoint with enhanced validation and rate limiting
 app.post('/api/signup', authLimiter, async (req, res) => {
@@ -246,6 +284,146 @@ app.get('/api/health', (req, res) => {
     uptime: process.uptime(),
     environment: process.env.NODE_ENV || 'development'
   });
+});
+
+// Search problems endpoint with filtering
+app.get('/api/search-problems', auth, async (req, res) => {
+  try {
+    const { 
+      query = '', 
+      difficulty = '', 
+      completed = '', 
+      page = 1, 
+      limit = 50 
+    } = req.query;
+
+    const user = await User.findById(req.user.userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Load problems from file with proper CSV parsing
+    const fs = require('fs');
+    const path = require('path');
+    const problemsFile = path.join(__dirname, '../striver_pod_frontend/public/striver_problems.txt');
+    
+    let problems = [];
+    try {
+      const data = fs.readFileSync(problemsFile, 'utf8');
+      const lines = data.trim().split('\n').slice(1); // Skip header
+      
+      problems = lines.map(line => {
+        // Proper CSV parsing that handles quoted fields with commas
+        const fields = [];
+        let current = '';
+        let inQuotes = false;
+        
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          
+          if (char === '"' && (i === 0 || line[i-1] === ',')) {
+            inQuotes = true;
+          } else if (char === '"' && inQuotes && (i === line.length - 1 || line[i+1] === ',')) {
+            inQuotes = false;
+          } else if (char === ',' && !inQuotes) {
+            fields.push(current.trim());
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+        fields.push(current.trim()); // Add the last field
+        
+        // Clean up the fields (remove extra quotes)
+        const cleanFields = fields.map(field => field.replace(/^"|"$/g, ''));
+        
+        if (cleanFields.length >= 3) {
+          const idx = parseInt(cleanFields[0], 10);
+          const problem_name = cleanFields[1];
+          const difficulty = cleanFields[2];
+          
+          return {
+            idx,
+            problem_name,
+            difficulty
+          };
+        }
+        return null;
+      }).filter(problem => problem && problem.idx && problem.problem_name && problem.difficulty);
+      
+      console.log(`Loaded ${problems.length} problems from file`);
+    } catch (fileError) {
+      console.error('Error reading problems file:', fileError);
+      return res.status(500).json({ message: 'Error loading problems data' });
+    }
+
+    // Filter by search query (case-insensitive)
+    let filteredProblems = problems;
+    if (query.trim()) {
+      const searchTerm = query.toLowerCase().trim();
+      filteredProblems = problems.filter(problem => 
+        problem.problem_name.toLowerCase().includes(searchTerm) ||
+        problem.idx.toString().includes(searchTerm)
+      );
+    }
+
+    // Filter by difficulty
+    if (difficulty && ['Easy', 'Medium', 'Hard'].includes(difficulty)) {
+      filteredProblems = filteredProblems.filter(problem => 
+        problem.difficulty === difficulty
+      );
+    }
+
+    // Filter by completion status
+    if (completed !== '') {
+      const isCompleted = completed === 'true';
+      const completedProblems = user.completedProblems || [];
+      
+      if (isCompleted) {
+        filteredProblems = filteredProblems.filter(problem => 
+          completedProblems.includes(problem.idx)
+        );
+      } else {
+        filteredProblems = filteredProblems.filter(problem => 
+          !completedProblems.includes(problem.idx)
+        );
+      }
+    }
+
+    // Pagination
+    const pageNum = Math.max(1, parseInt(page));
+    const limitNum = Math.min(100, Math.max(1, parseInt(limit))); // Cap at 100
+    const startIndex = (pageNum - 1) * limitNum;
+    const endIndex = startIndex + limitNum;
+    
+    const paginatedProblems = filteredProblems.slice(startIndex, endIndex);
+
+    // Add completion status to each problem
+    const completedProblems = user.completedProblems || [];
+    const enrichedProblems = paginatedProblems.map(problem => ({
+      ...problem,
+      isCompleted: completedProblems.includes(problem.idx)
+    }));
+
+    res.json({
+      problems: enrichedProblems,
+      totalResults: filteredProblems.length,
+      totalPages: Math.ceil(filteredProblems.length / limitNum),
+      currentPage: pageNum,
+      hasMore: endIndex < filteredProblems.length,
+      filters: {
+        query: query.trim(),
+        difficulty,
+        completed,
+        page: pageNum,
+        limit: limitNum
+      }
+    });
+
+  } catch (error) {
+    console.error('Search problems error:', error);
+    res.status(500).json({ message: 'Failed to search problems' });
+  }
 });
 
 // Error handling middleware
